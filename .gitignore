@@ -1,0 +1,20 @@
+# Operating system files
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+desktop.ini
+
+# Python bytecode, created when a .py file is compiled or linted on a computer
+__pycache__/
+*.pyc
+*.pyo
+
+# Precompiled MicroPython bytecode
+*.mpy
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*~

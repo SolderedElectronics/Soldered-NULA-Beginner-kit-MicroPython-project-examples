@@ -3,7 +3,6 @@
 # BRIEF: MicroPython module for Qwiic functionalities
 # LAST UPDATED: 2025-06-10
 from machine import I2C, Pin
-import time
 from os import uname
 
 

@@ -1,90 +1,72 @@
 """
-@file		4.1_Print_Message.py
-@brief		Example demonstrating how to use 16x2 LCD Display to display the time difference
-            between button presses.
+@file       4.1_Print_Message.py
+@brief      Example that shows how to display a message on an LCD screen.
+            The LCD is controlled using the Soldered LCD driver.
+            This example demonstrates the basics of initializing the display and printing text.
+            For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author		Soldered
+@author     Soldered
 """
 
-# Import Pin and I2C to initialize communications with external LCD driver
+"""
+I2C is a way for several devices to talk to the board over just two wires, and it is what the Qwiic connector carries.
+We need it here because the display is a Qwiic module.
+"""
 from machine import I2C, Pin
-from LCD import LCD_I2C
-import time
 
-# If you aren't using the Qwiic connector, manually enter your I2C pins
+"""
+The Soldered driver for the LCD display. It lives in the lib folder of this repository, so copy the whole lib folder
+onto your board, otherwise MicroPython will not be able to find it.
+"""
+from LCD import LCD_I2C
+
+"""
+Here we set up the I2C connection. The two pins are fixed by the board: on the NULA MINI, I2C uses IO6 for the data
+line (SDA) and IO7 for the clock line (SCL), which are exactly the pins the Qwiic connector is wired to.
+Unlike Arduino, MicroPython does not find these on its own, so we always name them.
+"""
 i2c = I2C(0, scl=Pin(7), sda=Pin(6))
+
+"""
+Here we create our display object, which we named "lcd". An object is our way of talking to the display: every
+function we call on it, we call through this name. We hand it the I2C connection we just made.
+The display in this kit is 16 characters wide and 2 rows tall, which is where the name 16x2 comes from.
+"""
 lcd = LCD_I2C(i2c)
 
-# Initialize sensor over Qwiic
-# lcd = LCD_I2C()
-
-# Initialize button on pin 5
-BUTTON_PIN = 5
-btn = Pin(BUTTON_PIN, Pin.IN, Pin.PULL_DOWN) # Use internal PULL-DOWN to set the pin LOW (0) when the button is not pressed
-
-# Function for printing new elapsed time each time button is pressed
-def print_time_lcd(elapsed_time_s, isFirstPrint):
-    # Check if button is pressed for first time, print accordingly
-    if isFirstPrint:
-        lcd.clear()
-        lcd.setCursor(0, 0)
-        lcd.print("Elapsed time: ")
-    # Set cursor to point to first character in second row
-    lcd.setCursor(0, 1)
-    # Check if more than a minute has passed
-    if elapsed_time_s < 60:
-        # Print time in seconds format
-        msg = "{:6.2f} s".format(elapsed_time_s)
-    else:
-        # Print time in MM:SS format
-        minutes = int(elapsed_time_s / 60)
-        seconds = int(elapsed_s % 60)
-        msg = "{:02d}:{:02d} min".format(minutes, seconds)
-    # Overwrite old text
-    msg = (msg + " " * 16)[:16]
-    # Print new text
-    lcd.print(msg)
-
-# Turn on the backlight of the LCD
-lcd.backlight()
-
-# Start communication with the LCD over I2C
+"""
+begin() starts the communication and prepares the display for use. It has to come first, before anything else we ask
+the display to do.
+"""
 lcd.begin()
 
-# Hello world example
-# Sets the cursor to the third character place in the first row
-lcd.setCursor(2, 0)
-lcd.print("Hello, World!")
-# Sets the cursor to the first character place in the second row
+"""
+backlight() turns on the light behind the screen, without which the text is very hard to read. Note that this has to
+come after begin(), because begin() resets the display and would switch the light back off.
+"""
+lcd.backlight()
+
+# clear() wipes anything that was left on the screen from before, so we start from a clean display.
+lcd.clear()
+
+"""
+setCursor() chooses where the next text will appear. The first number is the column and the second is the row, and
+both start counting at zero, so (0, 0) is the top left corner.
+print() then writes our text starting at that position.
+"""
+lcd.setCursor(0, 0)
+lcd.print("Hello, NULA!")
+
+"""
+Move to the second line and print another message. (0, 1) means column zero of row one, which is the start of the
+second line.
+Keep in mind that this display fits exactly 16 characters per row, so anything longer is simply cut off at the edge.
+Count the characters of your own messages before printing them.
+"""
 lcd.setCursor(0, 1)
-lcd.print("Press the button")
+lcd.print("Let's start!")
 
-# Define timer variables for measuring elapsed time between button presses and debounce
-last_press_MS = time.ticks_ms() 
-DEBOUNCE_MS = 30 # Debounce time
-
-# Flag to check if button was pressed for the first time or was already pressed
-isFirstPrint = True
-
-# Main loop to control the program
-while True:
-    # Get current button state
-    current_state = btn.value()
-    # Check if button was pressed
-    if current_state == 1:
-        # Check if enough time has passed since last press for debounce
-        if time.ticks_diff(time.ticks_ms(), last_press_MS) >= DEBOUNCE_MS:
-            if btn.value() == 0: # Additional debounce check to count only one press
-                # Get elapsed time from last press in seconds
-                elapsed_s = time.ticks_diff(time.ticks_ms(), last_press_MS) / 1000.0
-                # Print elapsed time on LCD
-                print_time_lcd(elapsed_s, isFirstPrint)
-                # Update first print flag
-                isFirstPrint = False
-            
-                # Reset timer
-                last_press_MS = time.ticks_ms()
-                
-                # Wait until button is released to avoid repeated triggers
-                while btn.value() == 0:
-                    time.sleep_ms(10)
+"""
+And that is all. Unlike the earlier examples there is no while True loop here, because nothing needs to happen over
+and over: the message stays on the screen until the board is reset or powered off.
+"""
