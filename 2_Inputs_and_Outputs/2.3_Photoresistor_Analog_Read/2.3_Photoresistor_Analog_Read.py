@@ -5,7 +5,7 @@
             The program prints the measured value to the console.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 """

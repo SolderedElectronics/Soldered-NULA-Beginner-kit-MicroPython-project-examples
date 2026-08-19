@@ -6,7 +6,7 @@
             In the previous example the board asked a website for data, here the board is the one being asked.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # The network module contains everything needed to join a Wi-Fi network.
@@ -185,8 +185,7 @@ try:
         path = parts[1] if len(parts) > 1 else "/"
 
         """
-        Here we decide what to do with each address. This is called routing: each address gets its own answer, and in
-        the Arduino version of this example each one has a function of its own.
+        Here we decide what to do with each address. This is called routing: every address gets its own answer.
         The addresses starting with /led are the ones the buttons and the JavaScript in the page ask for, and they
         answer with a short piece of plain text rather than a whole page.
         """

@@ -6,7 +6,7 @@
             into a brightness level.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # The Soldered driver for the Ultrasonic Distance Sensor, found in the lib folder of this repository.
@@ -15,8 +15,7 @@ from UltrasonicSensor import UltrasonicSensor
 """
 I2C is what the Qwiic connector carries, and the sensor is a Qwiic module.
 PWM stands for Pulse Width Modulation. It switches a pin on and off very quickly, and the longer it stays on during
-each cycle, the brighter an LED connected to it looks to our eyes. This is how MicroPython does what analogWrite()
-does in Arduino.
+each cycle, the brighter an LED connected to it looks to our eyes.
 """
 from machine import I2C, Pin, PWM
 import time
@@ -74,7 +73,7 @@ led.freq(5000)
 
 def value_map(value, in_min, in_max, out_min, out_max):
     """
-    This is a function we wrote ourselves, because MicroPython has no map() function the way Arduino does.
+    This is a function we wrote ourselves, because there is no ready-made function for rescaling a number.
     It takes a number from one range and rescales it into another range. Handing it a distance between MIN_DISTANCE
     and MAX_DISTANCE gives us back a brightness, and because we will pass the output range reversed, the smallest
     distance produces the largest brightness.

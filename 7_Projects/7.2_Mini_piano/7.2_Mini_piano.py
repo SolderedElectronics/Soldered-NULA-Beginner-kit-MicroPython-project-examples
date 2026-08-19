@@ -5,12 +5,12 @@
             It builds on the button reading from section 2.1 and the buzzer from section 2.4.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 """
 PWM switches a pin on and off very quickly, and feeding that into a buzzer is what makes it produce a sound. The
-switching speed is what we hear as the pitch. This is how MicroPython does what the tone() function does in Arduino.
+switching speed is what we hear as the pitch.
 """
 from machine import Pin, PWM
 import time

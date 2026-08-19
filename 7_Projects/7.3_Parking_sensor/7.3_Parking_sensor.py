@@ -6,7 +6,7 @@
             It builds on the distance measuring from section 3.1 and the buzzer from section 2.4.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # The Soldered driver for the Ultrasonic Distance Sensor, found in the lib folder of this repository.

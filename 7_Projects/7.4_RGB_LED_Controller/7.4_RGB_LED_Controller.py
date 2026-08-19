@@ -6,7 +6,7 @@
             shows how one sensor reading can drive three outputs at the same time.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 """
@@ -72,7 +72,7 @@ pwm_b = PWM(Pin(BLUE_PIN), freq=PWM_FREQ)
 
 def value_map(value, in_min, in_max, out_min, out_max):
     """
-    This is a function we wrote ourselves, because MicroPython has no map() function the way Arduino does.
+    This is a function we wrote ourselves, because there is no ready-made function for rescaling a number.
     It takes a number from one range and rescales it into another range, which is how we turn a light level into a
     brightness.
     """

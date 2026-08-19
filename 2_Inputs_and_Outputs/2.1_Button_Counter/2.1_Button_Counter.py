@@ -4,7 +4,7 @@
             This example does NOT use any debouncing or signal stabilization.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # The machine module holds everything that talks to the hardware, and Pin controls a single pin.
@@ -20,7 +20,7 @@ BUTTON_PIN = 19
 
 """
 Here we create our Pin object, which we named "btn". Pin.IN tells the board that this pin should read a value instead
-of writing one, the same job pinMode() does in Arduino.
+of writing one.
 Pin.PULL_UP switches on a resistor inside the chip that gently ties the pin to 3.3V. Without it the pin would be
 floating, meaning it is connected to nothing and picks up random noise, and the board would read presses that never
 happened. Because the resistor holds the pin high, the button only has to connect the pin to GND, so no extra parts
@@ -38,7 +38,7 @@ counter = 0
 print("Button Counter Example started!")
 print("Press the button to increase the counter...")
 
-# A while True loop repeats forever, which is how MicroPython does what the loop() function does in Arduino.
+# A while True loop repeats forever, so the code inside it keeps running until we stop the program.
 while True:
 
     """

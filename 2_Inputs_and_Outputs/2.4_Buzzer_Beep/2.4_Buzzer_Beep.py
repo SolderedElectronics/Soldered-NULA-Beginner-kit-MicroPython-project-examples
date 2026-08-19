@@ -4,14 +4,13 @@
             The NULA MINI board will play a short melody by changing tone frequencies.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 """
 PWM stands for Pulse Width Modulation. It switches a pin on and off very quickly, and we can choose both how fast it
 switches and what fraction of the time it stays on. Feeding that fast switching into a buzzer is what makes it
-produce a sound, and the switching speed is what we hear as the pitch. This is how MicroPython does what the tone()
-function does in Arduino.
+produce a sound, and the switching speed is what we hear as the pitch.
 """
 from machine import Pin, PWM
 import time

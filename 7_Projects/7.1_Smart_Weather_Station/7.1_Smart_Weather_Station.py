@@ -6,7 +6,7 @@
             webhook on the internet so you can follow the readings from anywhere.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # I2C is what the Qwiic connector carries, and both the sensor and the display are Qwiic modules.

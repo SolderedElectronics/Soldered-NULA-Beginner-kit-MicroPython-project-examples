@@ -5,7 +5,7 @@
             This example demonstrates how to use scrollDisplayLeft() to move text across the screen.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # I2C is what the Qwiic connector carries, and the display is a Qwiic module.

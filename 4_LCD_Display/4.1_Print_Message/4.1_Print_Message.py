@@ -5,7 +5,7 @@
             This example demonstrates the basics of initializing the display and printing text.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 """
@@ -23,7 +23,7 @@ from LCD import LCD_I2C
 """
 Here we set up the I2C connection. The two pins are fixed by the board: on the NULA MINI, I2C uses IO6 for the data
 line (SDA) and IO7 for the clock line (SCL), which are exactly the pins the Qwiic connector is wired to.
-Unlike Arduino, MicroPython does not find these on its own, so we always name them.
+We always name them ourselves, because the board does not assume which pins the connector uses.
 """
 i2c = I2C(0, scl=Pin(7), sda=Pin(6))
 

@@ -6,7 +6,7 @@
             It introduces two new ideas: shifting data out one bit at a time, and latching the outputs.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 from machine import Pin
@@ -59,7 +59,7 @@ counter = 0
 
 def shift_out(value):
     """
-    This is a function we wrote ourselves, because MicroPython has no shiftOut() function the way Arduino does.
+    This is a function we wrote ourselves, because there is no ready-made function for shifting a byte out.
     It sends one byte out over the data pin, one bit at a time, pulsing the clock pin after each bit.
     range(7, -1, -1) counts down from 7 to 0, so we start with the most significant bit, meaning the leftmost one,
     which is the order the 74HC595 expects.

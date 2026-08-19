@@ -5,7 +5,7 @@
             to the console.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # I2C is what the Qwiic connector carries, and the SHTC3 is a Qwiic module.

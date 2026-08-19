@@ -3,7 +3,7 @@
 @brief      Example that shows how to control the blinking of a simple LED.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 """
@@ -24,15 +24,15 @@ without it the LED draws more than either it or the pin is built for, so both ca
 PIN_NUMBER = 4
 
 """
-This is a variable that defines the blinking time, in seconds. Note that MicroPython counts in seconds here, while
-Arduino counts in milliseconds, so 1 second and 1000 milliseconds mean the same thing.
+This is a variable that defines the blinking time, in seconds. Note that this is counted in whole seconds and not in
+milliseconds, so a value of 1 means one full second.
 Feel free to experiment with this value.
 """
 DELAY_S = 1
 
 """
 Here we create our Pin object, which we named "led". Creating it is what configures the pin: Pin.OUT tells the board
-that this pin should write a value instead of reading one, the same job pinMode() does in Arduino.
+that this pin should write a value instead of reading one.
 This simply means that the pin "reads" the available data when in input mode, and "writes" data when in output mode.
 As our pin needs to turn on the LED, we will put the pin in OUT mode.
 """
@@ -40,7 +40,7 @@ led = Pin(PIN_NUMBER, Pin.OUT)
 
 """
 A while loop repeats the block below it for as long as its condition is true. Because True is always true, this loop
-never ends, which is how MicroPython does what the loop() function does in Arduino.
+never ends, so the code inside it keeps running until we stop the program.
 """
 while True:
 

@@ -7,7 +7,7 @@
             section 2.4 and the Wi-Fi connection from section 6.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered
+@author     Soldered Electronics
 """
 
 # I2C is what the Qwiic connector carries, PWM drives the buzzer, and Pin reads the two buttons.
@@ -190,8 +190,8 @@ lcd.print("WiFi connected")
 time.sleep(1)
 
 """
-Now that we are online we can ask for the time. Unlike Arduino, MicroPython waits for the answer here, so once this
-returns successfully the clock is already correct.
+Now that we are online we can ask for the time. settime() waits for the answer to come back, so once it returns
+successfully the clock of the board is already correct.
 """
 if sync_time():
     time_synced = True
