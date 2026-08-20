@@ -79,18 +79,33 @@ python -m esptool --chip esp32c6 --port /dev/ttyACM0 --baud 460800 write_flash 0
 
 On Windows the port looks like `COM5`, and on macOS like `/dev/cu.usbmodem*`.
 
-### 2. Copy the drivers onto the board
+### 2. Put the drivers on the board
 
 The three Qwiic modules are driven by the Soldered drivers in the [`lib`](lib) folder of this repository. MicroPython
-looks for imported modules in a folder called `lib` on the board itself, so the whole folder has to be copied across
-before those examples will run.
+looks for imported modules in a folder called `lib` on the board itself, so they have to be on the board before those
+examples will run.
 
-In **Thonny**, open the `lib` folder in the *Files* pane, right-click it and choose *Upload to /*.
-
-Or with `mpremote`:
+**The easy way, with `mip`.** MicroPython's own package installer can fetch them straight from this repository, so
+there is nothing to download by hand:
 
 ```bash
 pip install mpremote
+mpremote mip install github:SolderedElectronics/Soldered-NULA-Beginner-kit-MicroPython-project-examples/lib
+```
+
+That puts all four drivers into `/lib` on the board, which is exactly where the examples expect them.
+
+**To install the examples as well**, leave the `/lib` off the end and `mip` will fetch the drivers together with all 22
+example scripts, which land in `/lib/Examples` grouped by section:
+
+```bash
+mpremote mip install github:SolderedElectronics/Soldered-NULA-Beginner-kit-MicroPython-project-examples
+```
+
+**By hand instead.** In **Thonny**, open the `lib` folder in the *Files* pane, right-click it and choose *Upload to /*.
+Or copy it with `mpremote` directly:
+
+```bash
 mpremote connect auto fs cp -r lib :
 ```
 
@@ -228,9 +243,13 @@ voltage. This arrangement is called a voltage divider.
 | [`lib/UltrasonicSensor.py`](lib/UltrasonicSensor.py) | sections 3, 7.3 | `UltrasonicSensor`, the distance sensor |
 | [`lib/Qwiic.py`](lib/Qwiic.py) | the drivers above | shared Qwiic helper the other drivers build on |
 
-Copy the whole folder onto the board, as described in step 2 above. If an example stops with
-`ImportError: no module named 'LCD'`, the folder has not been copied across, or it has landed somewhere other than
+Install them with `mip`, or copy the folder across by hand, as described in step 2 above. If an example stops with
+`ImportError: no module named 'LCD'`, the drivers are not on the board, or they have landed somewhere other than
 `/lib`.
+
+The same drivers are also published on their own, one module per sensor, in the
+[Soldered MicroPython Modules](https://github.com/SolderedElectronics/Soldered-MicroPython-Modules) repository, if you
+want just one of them for a project of your own.
 
 Sections 1, 2 and 6 use nothing but the modules built into MicroPython, so they run on a freshly flashed board.
 
