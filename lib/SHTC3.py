@@ -77,8 +77,16 @@ class SHTC3:
             return None
 
     def wakeup(self):
-        """Wake the sensor from sleep mode."""
-        return self.twi_command(SHTC3_WAKEUP)
+        """
+        Wake the sensor from sleep mode.
+        The SHTC3 needs up to 240 us after the wake-up command before it will
+        acknowledge the next one, so the wait has to happen here, after the
+        command has been sent.
+        """
+        if not self.twi_command(SHTC3_WAKEUP):
+            return False
+        time.sleep_us(240)
+        return True
 
     def reset(self):
         """Perform a soft reset of the sensor."""
@@ -94,7 +102,6 @@ class SHTC3:
         Optionally performs an initial measurement.
         Returns True if successful, False otherwise.
         """
-        time.sleep_us(240)
         if not self.wakeup():
             return False
 
