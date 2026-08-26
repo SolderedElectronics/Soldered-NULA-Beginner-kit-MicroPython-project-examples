@@ -194,11 +194,15 @@ class LCD_I2C:
 
     def scrollDisplayLeft(self):
         """Scroll the entire display one position to the left."""
+        self._output.rs = 0
+        self._output.rw = 0
         self.lcd_write(0x18)
         sleep_us(37)
 
     def scroll_display_right(self):
         """Scroll the entire display one position to the right."""
+        self._output.rs = 0
+        self._output.rw = 0
         self.lcd_write(0x1C)
         sleep_us(37)
 
