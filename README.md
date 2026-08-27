@@ -1,4 +1,4 @@
-<img src="https://soldered.com/cdn/shop/files/333371_featured-photo_6fa868_124b306f-abaf-4553-b5cb-8c15ea78311c.jpg" alt="Embedded Journey Kit - Zero to Hero" width="100%">
+<img src="assets/kit-contents.webp" alt="Embedded Journey Kit - Zero to Hero" width="100%">
 
 # Embedded Journey Kit - Zero to Hero: MicroPython examples
 
