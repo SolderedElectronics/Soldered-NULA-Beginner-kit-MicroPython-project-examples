@@ -54,6 +54,7 @@ Ready to start from zero?
 | 10 mm colorful LED diode | 13 | 12 single-colour LEDs and 1 RGB LED |
 | 10k photoresistor | 3 | |
 | Buzzer | 1 | Passive |
+| Push button | 5 | 4 used at once, in 7.2 Mini piano |
 | Shift register IC | 1 | 74HC595 |
 | 10k THT resistor | 15 | Voltage divider for the photoresistors, plus spares |
 | 330 Ohm resistor | 25 | One in series with every LED, to limit the current |
