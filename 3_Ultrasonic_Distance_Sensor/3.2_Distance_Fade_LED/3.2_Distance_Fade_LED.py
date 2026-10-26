@@ -32,7 +32,7 @@ without it the LED draws more than either it or the pin is built for, so both ca
 LED_PIN = 2
 
 """
-These two variables define the distance range we care about, in centimeters. Anything closer than the minimum counts
+These two variables define the distance range we care about, in millimeters. Anything closer than the minimum counts
 as "as close as possible" and anything further than the maximum counts as "far away". Feel free to experiment with
 these values.
 """
@@ -97,8 +97,8 @@ while True:
     time.sleep_ms(MEASURE_WAIT_MS)
 
     """
-    getDistance() then fetches the stored answer, already converted into centimeters. The value comes back as a whole
-    number of centimeters, which is all the accuracy this sensor can honestly offer.
+    getDistance() then fetches the stored answer, already converted into millimeters. The value comes back as a whole
+    number of millimeters, which is all the accuracy this sensor can honestly offer.
     """
     distance = sensor.getDistance()
 
@@ -114,7 +114,7 @@ while True:
 
     """
     Here we keep the measured distance inside the range we defined above. This is called clamping, and we do it because
-    the next step expects a value inside a known range. Without it, an object 300 cm away would give us a brightness
+    the next step expects a value inside a known range. Without it, an object 300 mm away would give us a brightness
     value far outside anything the LED can use.
     """
     if distance < MIN_DISTANCE:
@@ -133,4 +133,4 @@ while True:
     led.duty_u16(brightness)
 
     # Print both values, so we can see how the brightness changes together with the distance.
-    print("Distance: {} cm -> Brightness: {}".format(distance, brightness))
+    print("Distance: {} mm -> Brightness: {}".format(distance, brightness))
