@@ -213,7 +213,7 @@ quick reference. All numbers are the `IO` numbers printed on the board.
 | 7.2 Mini piano | Button 1 | Button 2 | Button 3 | Button 4 | Buzzer | |
 | 7.3 Parking sensor | Buzzer | | | LED | | |
 | 7.4 RGB LED controller | Red | Green | Blue | Photoresistor | | |
-| 7.5 Shift register | Data | Latch | Clock | | | |
+| 7.5 Shift register | Clock | Latch | Data | | | |
 | 7.6 Morse code | LED | | | | | |
 | 7.7 Alarm clock | Hour button | Minute button | Buzzer | | | |
 | 7.8 Traffic light | Red | Orange | Green | | | |
