@@ -6,7 +6,7 @@
             It introduces two new ideas: shifting data out one bit at a time, and latching the outputs.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 from machine import Pin
@@ -15,13 +15,13 @@ import time
 """
 This is a variable to which we pass the number of pin that we had connected the shift register's data pin to, marked DS
 on the chip. This is the pin the bits themselves travel over, one after another.
-The NULA board has a pin naming logic as follows: IO2, where 2 is the number that we give to the variable.
+The NULA board has a pin naming logic as follows: IO4, where 4 is the number that we give to the variable.
 If you wish to use a different pin, make sure you are using a IO__ marked pin.
 
 Remember that each of the four LEDs on the shift register outputs needs its own 330 Ohm resistor in series with it,
 exactly as if it were wired straight to the board.
 """
-DATA_PIN = 2
+DATA_PIN = 4
 
 """
 This is a variable to which we pass the number of pin that we had connected the shift register's latch pin to. On the
@@ -35,7 +35,7 @@ This is a variable to which we pass the number of pin that we had connected the 
 SH_CP on the chip. The clock is a pin we switch up and down, and every time it goes up the chip takes in one more bit.
 This is how the chip knows when the next bit is ready.
 """
-CLOCK_PIN = 4
+CLOCK_PIN = 2
 
 """
 Here we create our three Pin objects. Pin.OUT tells the board that these pins should write a value instead of reading
@@ -61,12 +61,12 @@ def shift_out(value):
     """
     This is a function we wrote ourselves, because there is no ready-made function for shifting a byte out.
     It sends one byte out over the data pin, one bit at a time, pulsing the clock pin after each bit.
-    range(7, -1, -1) counts down from 7 to 0, so we start with the most significant bit, meaning the leftmost one,
-    which is the order the 74HC595 expects.
+    range(8) counts up from 0 to 7, so we start with the least significant bit, meaning the rightmost one.
+    The first bit sent travels furthest along the chip, which is why the lowest bit ends up on pin Q7.
     Shifting the value right by i positions and combining it with 1 using the bitwise AND ("&") is how we pick out the
     single bit we want to send.
     """
-    for i in range(7, -1, -1):
+    for i in range(8):
         bit = (value >> i) & 1
         data_pin.value(bit)
         clock_pin.value(1)

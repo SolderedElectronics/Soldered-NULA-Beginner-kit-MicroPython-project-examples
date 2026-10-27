@@ -6,7 +6,7 @@
             and writing your own functions to keep a longer program readable.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 from machine import Pin

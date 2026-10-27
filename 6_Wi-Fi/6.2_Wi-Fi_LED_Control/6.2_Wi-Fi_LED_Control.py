@@ -6,7 +6,7 @@
             In the previous example the board asked a website for data, here the board is the one being asked.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 # The network module contains everything needed to join a Wi-Fi network.

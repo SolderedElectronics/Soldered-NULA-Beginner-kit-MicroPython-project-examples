@@ -4,7 +4,7 @@
             The NULA MINI board will play a short melody by changing tone frequencies.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 """

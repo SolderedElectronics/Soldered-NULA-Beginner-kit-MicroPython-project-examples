@@ -3,10 +3,10 @@
 @brief      Example that shows how to measure distance using the Soldered Ultrasonic Distance Sensor.
             The sensor sends out a short ultrasonic pulse and then listens for its echo. It measures how long the
             echo took to come back, works out the distance from that time, and hands us the answer over Qwiic.
-            The measured distance is printed in centimeters to the console.
+            The measured distance is printed in millimeters to the console.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 """
@@ -68,7 +68,7 @@ while True:
 
     """
     getDistance() is the second step: it fetches the answer the sensor worked out and stored, already converted into
-    centimeters. The value comes back as a whole number of centimeters, which is all the accuracy this sensor can
+    millimeters. The value comes back as a whole number of millimeters, which is all the accuracy this sensor can
     honestly offer.
     """
     distance = sensor.getDistance()
@@ -76,12 +76,12 @@ while True:
     """
     The sensor answers with 0 when it heard no echo at all, which happens when nothing is in range or when the surface
     in front of it scatters the sound away. That is not a real measurement, so we say so rather than reporting a
-    distance of zero centimeters, which would suggest an object touching the sensor.
+    distance of zero millimeters, which would suggest an object touching the sensor.
     """
     if distance == 0:
         print("No echo received, nothing in range.")
     else:
-        print("Distance: {} cm".format(distance))
+        print("Distance: {} mm".format(distance))
 
     """
     time.sleep() is a function that starts a pause in the code, given in seconds. Without this pause the readings

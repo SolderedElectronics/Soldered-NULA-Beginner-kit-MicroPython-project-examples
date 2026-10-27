@@ -135,6 +135,9 @@ mpremote connect auto fs cp 1_Basic_Skills/1.2_LED_blinking/1.2_LED_blinking.py 
 There are 22 examples across seven sections. Sections 1 to 6 each teach one new thing at a time. Section 7 combines
 what you have learned into finished projects.
 
+Examples that have an "On your own" task in the manual also have a worked solution inside their folder, in a file
+named after the example plus `_on_your_own`.
+
 ### 1. Basic skills
 
 | Example | What you learn | Hardware |
@@ -213,7 +216,7 @@ quick reference. All numbers are the `IO` numbers printed on the board.
 | 7.2 Mini piano | Button 1 | Button 2 | Button 3 | Button 4 | Buzzer | |
 | 7.3 Parking sensor | Buzzer | | | LED | | |
 | 7.4 RGB LED controller | Red | Green | Blue | Photoresistor | | |
-| 7.5 Shift register | Data | Latch | Clock | | | |
+| 7.5 Shift register | Clock | Latch | Data | | | |
 | 7.6 Morse code | LED | | | | | |
 | 7.7 Alarm clock | Hour button | Minute button | Buzzer | | | |
 | 7.8 Traffic light | Red | Orange | Green | | | |
