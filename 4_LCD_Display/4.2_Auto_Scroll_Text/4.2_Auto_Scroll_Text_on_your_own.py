@@ -1,8 +1,7 @@
 """
 @file       4.2_Auto_Scroll_Text_on_your_own.py
-@brief      Example that shows how to automatically scroll text on a 16x2 LCD.
-            The LCD is controlled using the Soldered LCD driver.
-            This example demonstrates how to use scrollDisplayLeft() to move text across the screen.
+@brief      Variation of the 4.2 Auto scroll text example that makes the message travel from left to right instead of
+            right to left.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

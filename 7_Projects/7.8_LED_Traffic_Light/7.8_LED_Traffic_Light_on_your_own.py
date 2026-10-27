@@ -1,9 +1,7 @@
 """
 @file       7.8_LED_Traffic_Light_on_your_own.py
-@brief      Project that simulates a traffic light with three LEDs, running through green, blinking green, orange,
-            red and red together with orange, just like the lights on many European roads.
-            It introduces the finite state machine, or FSM, which is a very common way of writing programs that move
-            through a fixed series of steps without ever pausing the program to wait.
+@brief      Variation of the 7.8 LED traffic light example with a night mode: a sixth state, ORANGE_BLINK, blinks the
+            orange LED once a second and is the starting state.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

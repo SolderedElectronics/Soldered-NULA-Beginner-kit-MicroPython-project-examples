@@ -1,8 +1,7 @@
 """
 @file       2.3_Photoresistor_Analog_Read_on_your_own.py
-@brief      Example that shows how to read light intensity using a photoresistor (LDR)
-            connected to the analog input of the NULA MINI board.
-            The program prints the measured value to the console.
+@brief      Variation of the 2.3 Photoresistor example that also tells you whether it is dark or light, by comparing
+            the reading with a threshold.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

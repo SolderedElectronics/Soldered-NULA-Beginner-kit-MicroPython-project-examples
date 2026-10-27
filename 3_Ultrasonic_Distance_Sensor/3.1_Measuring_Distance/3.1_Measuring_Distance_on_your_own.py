@@ -1,9 +1,7 @@
 """
 @file       3.1_Measuring_Distance_on_your_own.py
-@brief      Example that shows how to measure distance using the Soldered Ultrasonic Distance Sensor.
-            The sensor sends out a short ultrasonic pulse and then listens for its echo. It measures how long the
-            echo took to come back, works out the distance from that time, and hands us the answer over Qwiic.
-            The measured distance is printed in millimeters to the console.
+@brief      Variation of the 3.1 Measuring distance example that prints the distance in centimetres with one decimal
+            place, instead of millimetres.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

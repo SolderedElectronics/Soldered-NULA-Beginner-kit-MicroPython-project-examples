@@ -1,7 +1,7 @@
 """
 @file       2.4_Buzzer_Beep_on_your_own.py
-@brief      Example that shows how to generate simple sounds using a passive buzzer.
-            The NULA MINI board will play a short melody by changing tone frequencies.
+@brief      Variation of the 2.4 Buzzer beep example that plays the scale backwards, from C5 down to C4, without
+            changing either array.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

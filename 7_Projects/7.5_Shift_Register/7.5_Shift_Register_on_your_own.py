@@ -1,9 +1,7 @@
 """
 @file       7.5_Shift_Register_on_your_own.py
-@brief      Project that shows how to drive many LEDs with only three pins of the board, using a 74HC595 shift
-            register. The example builds a 4-bit binary counter that counts from 0 to 15 and displays the count on
-            four LEDs, which is a nice way of seeing how computers count in binary.
-            It introduces two new ideas: shifting data out one bit at a time, and latching the outputs.
+@brief      Variation of the 7.5 Shift register example that moves one lit LED along the row (1, 2, 4, 8, then back to
+            1) instead of counting in binary.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

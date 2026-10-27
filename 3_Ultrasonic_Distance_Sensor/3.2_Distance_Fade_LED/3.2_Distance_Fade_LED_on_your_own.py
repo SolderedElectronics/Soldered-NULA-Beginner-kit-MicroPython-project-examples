@@ -1,9 +1,7 @@
 """
 @file       3.2_Distance_Fade_LED_on_your_own.py
-@brief      Example that shows how to control the brightness of an LED based on the distance measured by the
-            Soldered Ultrasonic Distance Sensor. The closer an object is to the sensor, the brighter the LED
-            becomes. This example introduces PWM and a map function, two tools that let us turn a measured value
-            into a brightness level.
+@brief      Variation of the 3.2 Distance fade LED example with a range you can actually use: the LED starts to glow
+            at 30 cm and reaches full brightness at 3 cm.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

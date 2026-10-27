@@ -1,9 +1,7 @@
 """
 @file       7.4_RGB_LED_Controller_on_your_own.py
-@brief      Project that uses a photoresistor to set the colour of an RGB LED. As the light in the room changes,
-            the colour slides from red in darkness, through green and blue, all the way to white in bright light.
-            It builds on the photoresistor from section 2.3 and the LED brightness control from section 3.2, and
-            shows how one sensor reading can drive three outputs at the same time.
+@brief      Variation of the 7.4 RGB LED controller example turned upside down, so darkness gives white and bright
+            light gives red. It works as a night light.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

@@ -1,6 +1,7 @@
 """
 @file       1.2_LED_blinking_on_your_own.py
-@brief      Example that shows how to control the blinking of a simple LED.
+@brief      Variation of the 1.2 LED blinking example that makes the LED beat like a heart: two quick flashes close
+            together, then a long rest, repeating once a second.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics
