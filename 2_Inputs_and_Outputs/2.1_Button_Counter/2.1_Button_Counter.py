@@ -4,7 +4,7 @@
             This example does NOT use any debouncing or signal stabilization.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 # The machine module holds everything that talks to the hardware, and Pin controls a single pin.

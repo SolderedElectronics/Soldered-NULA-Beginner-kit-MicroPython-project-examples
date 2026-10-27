@@ -4,7 +4,7 @@
             light gives red. It works as a night light.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Borna Zelenika @ soldered.com
 """
 
 """

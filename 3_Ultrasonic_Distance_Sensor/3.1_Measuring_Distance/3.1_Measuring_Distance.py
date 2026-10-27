@@ -6,7 +6,7 @@
             The measured distance is printed in millimeters to the console.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 """

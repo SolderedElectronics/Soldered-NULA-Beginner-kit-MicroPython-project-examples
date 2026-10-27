@@ -5,7 +5,7 @@
             console. This is the first step towards any project that needs data from the internet.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 """

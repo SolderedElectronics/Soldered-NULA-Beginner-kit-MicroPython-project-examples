@@ -6,7 +6,7 @@
             In example 6.1 we read data from the internet, here we write data to it.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 # The network module contains everything needed to join a Wi-Fi network.

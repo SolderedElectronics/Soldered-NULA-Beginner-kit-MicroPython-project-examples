@@ -4,7 +4,7 @@
             at 30 cm and reaches full brightness at 3 cm.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Borna Zelenika @ soldered.com
 """
 
 # The Soldered driver for the Ultrasonic Distance Sensor, found in the lib folder of this repository.

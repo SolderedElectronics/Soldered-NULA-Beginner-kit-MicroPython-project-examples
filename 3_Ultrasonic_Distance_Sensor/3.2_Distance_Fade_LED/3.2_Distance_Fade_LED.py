@@ -6,7 +6,7 @@
             into a brightness level.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 # The Soldered driver for the Ultrasonic Distance Sensor, found in the lib folder of this repository.

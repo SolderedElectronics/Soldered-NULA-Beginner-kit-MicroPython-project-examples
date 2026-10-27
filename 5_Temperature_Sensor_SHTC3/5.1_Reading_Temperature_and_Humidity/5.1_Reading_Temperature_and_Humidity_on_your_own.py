@@ -4,7 +4,7 @@
             me!", whenever the humidity goes above 60 %.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Borna Zelenika @ soldered.com
 """
 
 # I2C is what the Qwiic connector carries, and the SHTC3 is a Qwiic module.

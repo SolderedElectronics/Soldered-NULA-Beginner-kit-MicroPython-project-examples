@@ -6,7 +6,7 @@
             through a fixed series of steps without ever pausing the program to wait.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Josip Šimun Kuči @ soldered.com
 """
 
 from machine import Pin

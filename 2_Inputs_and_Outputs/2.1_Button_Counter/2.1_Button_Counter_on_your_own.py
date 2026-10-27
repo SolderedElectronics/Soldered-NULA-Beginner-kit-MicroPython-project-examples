@@ -4,7 +4,7 @@
             again." and the count goes back to zero.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Borna Zelenika @ soldered.com
 """
 
 # The machine module holds everything that talks to the hardware, and Pin controls a single pin.

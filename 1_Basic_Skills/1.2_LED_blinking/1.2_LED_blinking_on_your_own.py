@@ -4,7 +4,7 @@
             together, then a long rest, repeating once a second.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
-@author     Soldered Electronics
+@author     Borna Zelenika @ soldered.com
 """
 
 """
