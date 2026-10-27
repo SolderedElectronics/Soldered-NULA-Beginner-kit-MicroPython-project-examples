@@ -1,9 +1,7 @@
 """
 @file       7.6_Morse_code_transmitter_on_your_own.py
-@brief      Project that turns text you type into the console into Morse code and blinks it out on an LED.
-            Morse code represents every letter as a pattern of short and long signals, called dots and dashes.
-            Along the way the example introduces three new ideas: reading text you type in, storing a lookup table,
-            and writing your own functions to keep a longer program readable.
+@brief      Variation of the 7.6 Morse code transmitter example with the full stop and the question mark added to the
+            Morse table, so both are sent.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

@@ -1,8 +1,7 @@
 """
 @file       2.2_Button_Debounce_on_your_own.py
-@brief      Example that shows how to toggle LED light with a press of a button.
-            In this example we will be using a button reading technique called debouncing. This technique gives us
-            an easy way to stabilize the button readings.
+@brief      Variation of the 2.2 Button debounce example that switches the LED when the button is released, instead of
+            when it is pressed.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

@@ -1,7 +1,7 @@
 """
 @file       2.1_Button_Counter_on_your_own.py
-@brief      Example that shows how to increase a counter each time a button is pressed.
-            This example does NOT use any debouncing or signal stabilization.
+@brief      Variation of the 2.1 Button counter example. After the tenth press it prints "Ten presses. Starting
+            again." and the count goes back to zero.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

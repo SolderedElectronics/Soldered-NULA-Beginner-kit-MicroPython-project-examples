@@ -1,6 +1,7 @@
 """
 @file       1.1_Hello_World_on_your_own.py
-@brief      Example that shows basic functionality of the serial console, writing data only.
+@brief      Variation of the 1.1 Hello World example that prints "Hello, World!" once a second for as long as the
+            board has power.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics

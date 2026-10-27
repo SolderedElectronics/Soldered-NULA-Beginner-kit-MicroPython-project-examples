@@ -1,8 +1,7 @@
 """
 @file       4.1_Print_Message_on_your_own.py
-@brief      Example that shows how to display a message on an LCD screen.
-            The LCD is controlled using the Soldered LCD driver.
-            This example demonstrates the basics of initializing the display and printing text.
+@brief      Variation of the 4.1 Print message example that also counts the seconds the program has been running on
+            the last three free columns of the bottom row.
             For details, connection diagram and more, check out the example documentation at: <link placeholder>
 
 @author     Soldered Electronics
